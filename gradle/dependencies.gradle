@@ -1,0 +1,13 @@
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'net.sf.jung', name: 'jung-api', version: 'latest.integration'
+    compile group: 'nu.mine.mosher.gnopt', name: 'Gnopt', version: 'latest.integration'
+    compile group: 'nu.mine.mosher.io', name: 'log-files', version: 'latest.integration'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: 'latest.integration'
+
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: 'latest.integration'
+}

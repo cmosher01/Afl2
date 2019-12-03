@@ -1,0 +1,15 @@
+(start)
+    [My Operation]
+    []
+    <OK?> yes
+    /Catch it/
+    (end)
+ # alternate start
+(alt start)
+    /Catch it/
+
+
+<OK?> no
+    |FOOBAR|
+    `Fix it`
+    [My Operation]
