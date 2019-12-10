@@ -1,0 +1,12 @@
+( start \\
+< _b0 B == 0 ? - no
+< _ab A \> B ? - no
+[ A = A \- B > _b0
+
+< _b0 -
+
+( > _ab
+[ _
+< _b0 - \_yes
+@ show A \@ stdout
+( end

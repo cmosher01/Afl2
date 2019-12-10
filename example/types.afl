@@ -1,13 +1,13 @@
-( terminal )
-[ process ]
-/ io /
-< decision >
-| predefined |
-~ document ~
-{ storage }
-C comment C
-$ manual input $
-` manual operation `
-@ display @
-# lines starting with # are ignored
-C blank lines separate flows C
+( terminal
+[ process
+/ io
+< decision
+| predefined
+~ document
+{ storage
+* comment
+$ manual input
+` manual operation
+@ display
+
+[ _id Vertex Label - Edge Label > _id

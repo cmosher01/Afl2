@@ -1,0 +1,5 @@
+apply plugin: AntlrPlugin
+
+generateGrammarSource {
+    arguments += ["-visitor", "-long-messages"]
+}

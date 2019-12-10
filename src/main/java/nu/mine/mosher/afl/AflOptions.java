@@ -16,6 +16,7 @@ import java.util.Optional;
 public class AflOptions {
     public List<URL> input = new ArrayList<>();
     public boolean intermediate;
+    public boolean force;
 
     public void __(Optional<String> s) throws IOException {
         this.input.add(asUrl(s.get()));
@@ -23,6 +24,10 @@ public class AflOptions {
 
     public void x(Optional<String> s) {
         intermediate = true;
+    }
+
+    public void force(Optional<String> s) {
+        force = true;
     }
 
     private static URL asUrl(final String pathOrUrl) throws IOException {

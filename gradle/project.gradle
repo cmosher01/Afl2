@@ -1,11 +1,11 @@
 apply plugin: ApplicationPlugin
 
-group = 'nu.mine.mosher.xml'
+group = 'nu.mine.mosher.afl'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 application {
-    mainClassName = 'nu.mine.mosher.afl.Afl'
+    mainClassName = 'Afl'
 }

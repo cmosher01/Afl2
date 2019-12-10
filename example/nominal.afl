@@ -1,15 +1,13 @@
-(start)
-    [My Operation]
-    []
-    <OK?> yes
-    /Catch it/
-    (end)
- # alternate start
-(alt start)
-    /Catch it/
+( start
+[ _op My Operation
+[
+< _ok OK? - yes
+/ _c Catch it
+( end >
+
+( alt start > _c
 
 
-<OK?> no
-    |FOOBAR|
-    `Fix it`
-    [My Operation]
+< _ok - no
+| FOOBAR
+` Fix it > _op

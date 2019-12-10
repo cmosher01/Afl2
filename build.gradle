@@ -4,5 +4,6 @@ def inc(module) {
 
 inc('version')
 inc('project')
+inc('antlr')
 inc('dependencies')
 inc('package')
