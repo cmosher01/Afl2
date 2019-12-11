@@ -1,14 +1,10 @@
 package nu.mine.mosher.afl;
 
 
-
 import java.io.IOException;
-import java.net.URI;
-import java.net.URL;
+import java.net.*;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 

@@ -1,37 +1,18 @@
-import com.google.common.graph.ElementOrder;
-import com.google.common.graph.MutableNetwork;
-import com.google.common.graph.Network;
-import com.google.common.graph.NetworkBuilder;
+import com.google.common.graph.*;
 import edu.uci.ics.jung.layout.algorithms.KKLayoutAlgorithm;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
-import edu.uci.ics.jung.visualization.renderers.BasicNodeLabelRenderer;
-import edu.uci.ics.jung.visualization.renderers.GradientNodeRenderer;
 import edu.uci.ics.jung.visualization.renderers.Renderer;
+import edu.uci.ics.jung.visualization.renderers.*;
 import nu.mine.mosher.afl.syntax.AflSymbol;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.WindowConstants;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -47,46 +28,123 @@ public class Afl
         final AflParser parser = new AflParser(tokens);
 
         final ParseTree tree = parser.flowchart();
-        System.out.println();
-        System.out.println(tree.toStringTree(parser));
+//        System.out.println();
+//        System.out.println(tree.toStringTree(parser));
 
         final List<StepRef> refs = new FlowChartV().visit(tree);
-        System.out.println();
-        refs.forEach(System.out::println);
+//        System.out.println();
+//        refs.forEach(System.out::println);
 
         final List<Step> steps = link(refs);
-        System.out.println();
-        steps.forEach(System.out::println);
 
-        final MutableNetwork<Step, UqEdge> g =
-            NetworkBuilder
-                .directed()
-                .allowsSelfLoops(true)
-                .allowsParallelEdges(true)
-                .nodeOrder(ElementOrder.unordered())
-                .edgeOrder(ElementOrder.unordered())
-                .build();
 
-        {
-            final Set<Step> sss = new HashSet<>();
-            steps.forEach(s -> {
-                if (!sss.contains(s)) {
-                    sss.add(s);
-                    g.addNode(s);
-                }
+        System.out.println("digraph {");
+        final Map<Step, UUID> stepToId = new HashMap<>();
+        steps.forEach(s -> stepToId.putIfAbsent(s, UUID.randomUUID()));
+
+        stepToId.keySet().forEach(s -> {
+            System.out.print(quoted(stepToId.get(s).toString()));
+
+            System.out.print(" [");
+
+            System.out.print("label=");
+            System.out.print(quoted(s.lab));
+
+            System.out.print(" ,");
+            System.out.print("shape="+shapeOf(s.sym));
+
+            System.out.print(" ,");
+            System.out.print("style=filled");
+            System.out.print(" ,");
+            System.out.print("fillcolor=cornsilk");
+
+            System.out.print(" ,");
+            System.out.print("fontname=Helvetica");
+
+
+            System.out.print("]");
+
+            System.out.println(";");
+
+            s.edges.forEach(e -> {
+                System.out.print(quoted(stepToId.get(s).toString()));
+                System.out.print(" -> ");
+                System.out.print(quoted(stepToId.get(e.dest).toString()));
+
+                System.out.print(" [");
+                System.out.print("taillabel=");
+                System.out.print(quoted(e.lab));
+
+                System.out.print(" ,");
+                System.out.print("fontname=Helvetica");
+
+                System.out.print(" ,");
+                System.out.print("arrowhead=onormal");
+
+                System.out.print("]");
+
+                System.out.println(";");
             });
-        }
-        {
-            final Set<Step> sss = new HashSet<>();
-            steps.forEach(s -> {
-                if (!sss.contains(s)) {
-                    sss.add(s);
-                    s.edges.forEach(e -> g.addEdge(s, e.dest, new UqEdge(e.lab)));
-                }
-            });
-        }
+        });
+        System.out.println("}");
+        System.out.flush();;
 
-        show(g);
+
+
+
+
+
+
+
+        //        System.out.println();
+//        steps.forEach(System.out::println);
+
+//        final MutableNetwork<Step, UqEdge> g =
+//            NetworkBuilder
+//                .directed()
+//                .allowsSelfLoops(true)
+//                .allowsParallelEdges(true)
+//                .nodeOrder(ElementOrder.unordered())
+//                .edgeOrder(ElementOrder.unordered())
+//                .build();
+//
+//        {
+//            final Set<Step> sss = new HashSet<>();
+//            steps.forEach(s -> {
+//                if (!sss.contains(s)) {
+//                    sss.add(s);
+//                    g.addNode(s);
+//                }
+//            });
+//        }
+//        {
+//            final Set<Step> sss = new HashSet<>();
+//            steps.forEach(s -> {
+//                if (!sss.contains(s)) {
+//                    sss.add(s);
+//                    s.edges.forEach(e -> g.addEdge(s, e.dest, new UqEdge(e.lab)));
+//                }
+//            });
+//        }
+//
+//        show(g);
+    }
+
+    private static String shapeOf(AflSymbol sym) {
+        switch (sym) {
+            case PROCESS: return "box";
+            case PREDEFINED: return "box3d";
+            case TERMINAL: return "circle";
+            case IO: return "parallelogram";
+            case DECISION: return "diamond";
+            case DOCUMENT: return "note";
+            case STORAGE: return "cylinder";
+            case COMMENT: return "plain";
+            case MANUAL_INPUT: return "house";
+            case MANUAL_OPERATION: return "invtrapezium";
+            case DISPLAY: return "cds";
+        }
+        return "box";
     }
 
     private static class UqEdge {
@@ -356,5 +414,9 @@ public class Afl
         private InvalidReference(final ID id) {
             super("invalid reference: "+id);
         }
+    }
+
+    private static String quoted(final String s) {
+        return "\""+s.replace("\"", "\\\"")+"\"";
     }
 }
