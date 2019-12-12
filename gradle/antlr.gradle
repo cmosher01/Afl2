@@ -1,5 +1,6 @@
 apply plugin: AntlrPlugin
 
 generateGrammarSource {
-    arguments += ["-visitor", "-long-messages"]
+    arguments += ["-visitor", "-long-messages", "-package", "nu.mine.mosher.afl.syntax"]
+    outputDirectory = new File("${project.buildDir}/generated-src/antlr/main/nu/mine/mosher/afl/syntax")
 }

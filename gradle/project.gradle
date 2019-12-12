@@ -7,5 +7,5 @@ java {
 }
 
 application {
-    mainClassName = 'Afl'
+    mainClassName = 'nu.mine.mosher.afl.Afl'
 }

@@ -9,16 +9,8 @@ repositories {
 dependencies {
     antlr group: 'org.antlr', name: 'antlr4', version: 'latest.release'
 
-    compile group: 'net.sf.jung', name: 'jung-api', version: 'latest.integration'
-    compile group: 'net.sf.jung', name: 'jung-visualization', version: 'latest.integration'
-    compile group: 'net.sf.jung', name: 'jung-graph-impl', version: 'latest.integration'
-    compile group: 'net.sf.jung', name: 'jung-algorithms', version: 'latest.integration'
-    compile group: 'net.sf.jung', name: 'jung-io', version: 'latest.integration'
-
     compile group: 'nu.mine.mosher.gnopt', name: 'Gnopt', version: 'latest.integration'
     compile group: 'nu.mine.mosher.io', name: 'log-files', version: 'latest.integration'
-
-    compile group: 'com.google.guava', name: 'guava', version: 'latest.release' /* 28.1-jre */
 
     compile group: 'org.slf4j', name: 'slf4j-api', version: 'latest.integration'
 
