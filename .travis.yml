@@ -3,10 +3,12 @@ language: java
 jobs:
   include:
     - if: 'branch = features'
+      os: linux
       jdk: openjdk8
       addons:
         apt:
           packages:
+            - openjfx
             - graphviz
       before_script:
         - 'git checkout -b master'
