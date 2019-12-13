@@ -9,7 +9,7 @@ for a in docs/*.afl ; do
         echo "<hr><pre><code>"
         cat $a
         echo "</code></pre>"
-        echo "<img src=\"../$a.svg\">"
+        echo "<img src=\"../${a#*/}.svg\">"
     }>>$h
 done
 echo "</body></html>" >>$h
