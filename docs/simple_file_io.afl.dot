@@ -1,11 +1,11 @@
 digraph {
-"e6447794-7373-414f-b316-92e0fdcc6f69" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"e6447794-7373-414f-b316-92e0fdcc6f69" -> "14cdaccc-8060-48b6-8444-53522ff2cb43" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"494a873c-33c6-475d-83e1-32e630b8fb9b" [label="b", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"494a873c-33c6-475d-83e1-32e630b8fb9b" -> "673b2c23-7539-40a4-9064-d3910eaf047a" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"f7c9fb50-d727-44db-b209-490194066738" [label="cat <a >b", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"f7c9fb50-d727-44db-b209-490194066738" -> "494a873c-33c6-475d-83e1-32e630b8fb9b" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"673b2c23-7539-40a4-9064-d3910eaf047a" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"14cdaccc-8060-48b6-8444-53522ff2cb43" [label="a", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"14cdaccc-8060-48b6-8444-53522ff2cb43" -> "f7c9fb50-d727-44db-b209-490194066738" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"5463eed4-1657-44f1-bfab-38ab382cb604" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"5463eed4-1657-44f1-bfab-38ab382cb604" -> "dc7e9b0f-7e10-43f4-a726-26ab9bd377aa" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"4298d772-98be-49cf-9d5d-b4e9184b3349" [label="b", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"4298d772-98be-49cf-9d5d-b4e9184b3349" -> "6157db36-5111-4951-a1ac-d40876f4270e" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"e908c716-f8d1-4fb0-b901-56c9e12e927a" [label="cat <a >b", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"e908c716-f8d1-4fb0-b901-56c9e12e927a" -> "4298d772-98be-49cf-9d5d-b4e9184b3349" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"6157db36-5111-4951-a1ac-d40876f4270e" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"dc7e9b0f-7e10-43f4-a726-26ab9bd377aa" [label="a", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"dc7e9b0f-7e10-43f4-a726-26ab9bd377aa" -> "e908c716-f8d1-4fb0-b901-56c9e12e927a" [taillabel="", arrowhead=onormal, fontname=Helvetica];
 }
