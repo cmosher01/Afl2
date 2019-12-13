@@ -1,6 +1,6 @@
 digraph {
-"f32c0261-29f5-4650-9f81-aa814df22d4a" [label="a", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"f32c0261-29f5-4650-9f81-aa814df22d4a" -> "3c4a0143-4090-40eb-abf6-a104050a401f" [taillabel="one", arrowhead=onormal, fontname=Helvetica];
-"f32c0261-29f5-4650-9f81-aa814df22d4a" -> "3c4a0143-4090-40eb-abf6-a104050a401f" [taillabel="two", arrowhead=onormal, fontname=Helvetica];
-"3c4a0143-4090-40eb-abf6-a104050a401f" [label="b", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"ad66ac95-2a2f-49b8-89be-a59e5c83fd30" [label="a", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"ad66ac95-2a2f-49b8-89be-a59e5c83fd30" -> "c08e13e9-1725-4341-89f6-ad80c16e7995" [taillabel="one", arrowhead=onormal, fontname=Helvetica];
+"ad66ac95-2a2f-49b8-89be-a59e5c83fd30" -> "c08e13e9-1725-4341-89f6-ad80c16e7995" [taillabel="two", arrowhead=onormal, fontname=Helvetica];
+"c08e13e9-1725-4341-89f6-ad80c16e7995" [label="b", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
 }
