@@ -1,0 +1,10 @@
+` edit
+{ github jboss
+/ sources
+| _j jenkins job
+/ config files
+[ target jboss host
+( end >
+
+` servers, restart?
+` start build > _j

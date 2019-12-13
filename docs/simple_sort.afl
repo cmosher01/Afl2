@@ -1,0 +1,9 @@
+( start
+$ enter data records
+/ data records
+[ sort
+[ print
+~ _report report
+( end >
+
+* confidential > _report
