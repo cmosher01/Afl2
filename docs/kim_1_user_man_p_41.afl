@@ -1,0 +1,30 @@
+( IRQ
+| USER OPTION >
+
+( NMI
+[ SAVE MPU REGISTERS > _start
+
+( RST
+[ INITIALIZE
+< _kb1 KB - KB > _start [ _kb1 - TTY
+[ BIT RATE MEASUREMENT
+
+( _start START
+< _kb2 KB - KB > _cell < _kb2 - TTY
+[ PRINT "KIM"
+[ _char GET CHARACTER
+< _kb3 KB - KB > _cell < _kb3 - TTY
+[ _x1 EXECUTE KEY > _char [ _x1 - G > _run
+
+[ _cell DISPLAY CELL
+< _ak1 AK - NO KEY > _start < _ak1
+[ DISPLAY CELL
+< _ak2 AK - NO KEY > _start < _ak2
+[ GET KEY
+[ _x2 EXECUTE KEY > _cell2 [ _x2 - RUN > _run
+
+[ _cell2 DISPLAY CELL
+< _ak3 AK - NO KEY > _start < _ak3 > _cell2
+
+[ _run PROCESS G/RUN KEYS
+( EXIT

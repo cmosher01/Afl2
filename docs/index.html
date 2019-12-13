@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>ANSI Flowchart Language</title>
+    <style>
+        html { font-family: sans-serif; }
+        .sym { font-size: 175%; font-family: monospace; text-align: center; }
+        .lab { padding-bottom: 17px; }
+        table { border-collapse: collapse; }
+    </style>
+</head>
+<body>
+<p>
+    Use these symbols to build the flowchart:
+</p>
+<table border="1">
+    <colgroup><col style="text-align:center"><col></colgroup>
+    <thead>
+        <tr><th>AFL character</th><th>flowchart symbol</th></tr>
+    </thead>
+    <tbody>
+        <tr><td class="sym">(</td> <td><span class="lab">terminal</span></td></tr>
+        <tr><td class="sym">[</td> <td><span class="lab">process</span></td></tr>
+        <tr><td class="sym">/</td> <td><span class="lab">i/o</span></td></tr>
+        <tr><td class="sym"><</td> <td><span class="lab">decision</span></td></tr>
+        <tr><td class="sym">|</td> <td><span class="lab">predefined</span></td></tr>
+        <tr><td class="sym">~</td> <td><span class="lab">document</span></td></tr>
+        <tr><td class="sym">{</td> <td><span class="lab">storage</span></td></tr>
+        <tr><td class="sym">*</td> <td><span class="lab">comment</span></td></tr>
+        <tr><td class="sym">$</td> <td><span class="lab">manual input</span></td></tr>
+        <tr><td class="sym">`</td> <td><span class="lab">manual operation</span></td></tr>
+        <tr><td class="sym">@</td> <td><span class="lab">display</span></td></tr>
+    </tbody>
+</table>
+<p>
+    An AFL file is a text (UTF-8) file composed of many symbol lines.
+    Each symbol line is in the following format:
+</p>
+<pre>S  [ _id ]  Label  [ - Output ]  [ > _to ]</pre>
+<p>where:</p>
+<p>S is the symbol, as shown in the chart above</p>
+<p>_id is an optional ID for the symbol (used to link another symbol to this one)</p>
+<p>Output is an optional label for the outgoing flow line</p>
+<p>_to is an optional ID specifying the destination for the outgoing flow</p>
+<p>&nbsp;</p>
+<p>If no outgoing flow is given, it defaults to the following symbol line.</p>
+<p>Use ">" without an ID to specify that there is no outgoing flow.</p>
+<p>Label and Output may contain spaces.</p>
+<p>A word starting with an underscore _ is treated as an ID.</p>
+<p>To use a symbol or word beginning with an underscore in a string, escape
+the character with a backslash.</p>
+<p>&nbsp;</p>
+<a href="examples.html">Examples</a>.
+</body>
+</html>

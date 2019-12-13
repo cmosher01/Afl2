@@ -1,0 +1,15 @@
+[ set LC = 0
+[ _read read line
+< _lab is label? - yes
+[ store symbol
+[ _inc set LC++ > _read
+
+< _lab - no
+< _org is ORG? - yes
+[ set LC > _read
+
+< _org - no
+< _end is END? - yes
+| pass 2 >
+
+< _end - no > _inc

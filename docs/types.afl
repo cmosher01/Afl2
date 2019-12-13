@@ -1,6 +1,6 @@
 ( terminal
 [ process
-/ io
+/ i/o
 < decision
 | predefined
 ~ document
