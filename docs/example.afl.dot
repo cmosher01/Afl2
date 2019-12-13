@@ -1,0 +1,19 @@
+digraph {
+"4945213d-9329-4319-afdb-daccc416a828" [label="B == 0 ?", shape=diamond, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"4945213d-9329-4319-afdb-daccc416a828" -> "a000dc82-52c2-4f92-b396-d20ca4b5a704" [taillabel="_yes", arrowhead=onormal, fontname=Helvetica];
+"4945213d-9329-4319-afdb-daccc416a828" -> "b1f8107e-2e39-4a3d-b3ed-070a6a932a26" [taillabel="no", arrowhead=onormal, fontname=Helvetica];
+"4945213d-9329-4319-afdb-daccc416a828" -> "0d77c13a-d231-4268-9051-5069ce866001" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"aa51add8-3fd7-4a16-b3c1-bd9ae2054a59" [label="backslash \ here", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"aa51add8-3fd7-4a16-b3c1-bd9ae2054a59" -> "4945213d-9329-4319-afdb-daccc416a828" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"1541091b-6a03-4201-b68a-bd6a74b06d34" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1bb63950-bfcb-4bda-8a8d-df76b2914479" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1bb63950-bfcb-4bda-8a8d-df76b2914479" -> "4945213d-9329-4319-afdb-daccc416a828" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"b1f8107e-2e39-4a3d-b3ed-070a6a932a26" [label="A > B ?", shape=diamond, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"b1f8107e-2e39-4a3d-b3ed-070a6a932a26" -> "399f1afc-e480-4167-9671-bdf1c73926c2" [taillabel="no", arrowhead=onormal, fontname=Helvetica];
+"a000dc82-52c2-4f92-b396-d20ca4b5a704" [label="show A @ stdout", shape=octagon, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"a000dc82-52c2-4f92-b396-d20ca4b5a704" -> "1541091b-6a03-4201-b68a-bd6a74b06d34" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"399f1afc-e480-4167-9671-bdf1c73926c2" [label="A = A - B", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"399f1afc-e480-4167-9671-bdf1c73926c2" -> "4945213d-9329-4319-afdb-daccc416a828" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"0d77c13a-d231-4268-9051-5069ce866001" [label="", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"0d77c13a-d231-4268-9051-5069ce866001" -> "b1f8107e-2e39-4a3d-b3ed-070a6a932a26" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}

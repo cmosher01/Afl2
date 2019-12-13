@@ -1,0 +1,26 @@
+digraph {
+"a27be1f6-f304-4b10-b6a9-55c41b949dc4" [label="document", shape=note, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"a27be1f6-f304-4b10-b6a9-55c41b949dc4" -> "472d24b4-c467-4898-81f0-2ca75adc2b57" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"bc234b88-a0b5-4f8a-86d5-a7ee2ca97270" [label="i/o", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"bc234b88-a0b5-4f8a-86d5-a7ee2ca97270" -> "31585eee-5d0b-40bc-801b-43e25217c206" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"2918cf5d-a8cd-4f36-bc17-b302cdbe932e" [label="predefined", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"2918cf5d-a8cd-4f36-bc17-b302cdbe932e" -> "a27be1f6-f304-4b10-b6a9-55c41b949dc4" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"b56c5052-3661-48e8-b266-7c53d33b75fb" [label="comment", shape=plain, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"b56c5052-3661-48e8-b266-7c53d33b75fb" -> "c454b378-52a4-4e20-89dc-6973435111a4" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"de03d7ae-b350-4e8a-8c43-fac93dd8c71e" [label="display", shape=octagon, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"de03d7ae-b350-4e8a-8c43-fac93dd8c71e" -> "f41fc239-51a2-4c1f-a039-7291a8fcfca0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"31585eee-5d0b-40bc-801b-43e25217c206" [label="decision", shape=diamond, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"31585eee-5d0b-40bc-801b-43e25217c206" -> "2918cf5d-a8cd-4f36-bc17-b302cdbe932e" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"f41fc239-51a2-4c1f-a039-7291a8fcfca0" [label="Vertex Label", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"f41fc239-51a2-4c1f-a039-7291a8fcfca0" -> "f41fc239-51a2-4c1f-a039-7291a8fcfca0" [taillabel="Edge Label", arrowhead=onormal, fontname=Helvetica];
+"8dec8a27-3896-4a6b-8b1d-1443987aa6a3" [label="terminal", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"8dec8a27-3896-4a6b-8b1d-1443987aa6a3" -> "68ac3221-cbb7-4e95-ad93-0379df25f1f1" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"472d24b4-c467-4898-81f0-2ca75adc2b57" [label="storage", shape=cylinder, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"472d24b4-c467-4898-81f0-2ca75adc2b57" -> "b56c5052-3661-48e8-b266-7c53d33b75fb" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"3fba8568-a21f-4385-9108-bb05ccf8a986" [label="manual operation", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"3fba8568-a21f-4385-9108-bb05ccf8a986" -> "de03d7ae-b350-4e8a-8c43-fac93dd8c71e" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"c454b378-52a4-4e20-89dc-6973435111a4" [label="manual input", shape=house, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"c454b378-52a4-4e20-89dc-6973435111a4" -> "3fba8568-a21f-4385-9108-bb05ccf8a986" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"68ac3221-cbb7-4e95-ad93-0379df25f1f1" [label="process", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"68ac3221-cbb7-4e95-ad93-0379df25f1f1" -> "bc234b88-a0b5-4f8a-86d5-a7ee2ca97270" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}
