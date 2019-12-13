@@ -7,13 +7,12 @@ import nu.mine.mosher.gnopt.Gnopt;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.*;
 
 
 
 public class Afl {
-    public static void main(String[] args) throws IOException, nu.mine.mosher.afl.syntax.Afl.InvalidReference, Gnopt.InvalidOption {
+    public static void main(final String... args) throws IOException, nu.mine.mosher.afl.syntax.Afl.InvalidReference, Gnopt.InvalidOption {
         final AflOptions opt = Gnopt.process(AflOptions.class, args);
         if (opt.help) {
             return;
@@ -40,12 +39,6 @@ public class Afl {
 
 
 
-    private static Map<Step, UUID> toStepMap(final List<Step> flowchart) {
-        final Map<Step, UUID> m = new HashMap<>();
-        flowchart.forEach(step -> m.putIfAbsent(step, UUID.randomUUID()));
-        return Collections.unmodifiableMap(m);
-    }
-
     private static void printDot(final List<Step> flowchart, PrintStream dot) {
         final Map<Step, UUID> stepToId = toStepMap(flowchart);
 
@@ -59,16 +52,20 @@ public class Afl {
                 quoted(step.label()),
                 shapeOf(step.symbol()));
 
-            step.edges().forEach(e -> {
-                dot.printf("%s -> %s [taillabel=%s, arrowhead=onormal, fontname=Helvetica];\n",
-                    quoted(node),
-                    quoted(stepToId.get(e.dest()).toString()),
-                    quoted(e.label()));
-            });
+            step.edges().forEach(e -> dot.printf("%s -> %s [taillabel=%s, arrowhead=onormal, fontname=Helvetica];\n",
+                quoted(node),
+                quoted(stepToId.get(e.dest()).toString()),
+                quoted(e.label())));
         });
 
         dot.println("}");
     }
+    private static Map<Step, UUID> toStepMap(final List<Step> flowchart) {
+        final Map<Step, UUID> m = new HashMap<>();
+        flowchart.forEach(step -> m.putIfAbsent(step, UUID.randomUUID()));
+        return Collections.unmodifiableMap(m);
+    }
+
 
     private static String shapeOf(AflSymbol sym) {
         switch (sym) {
