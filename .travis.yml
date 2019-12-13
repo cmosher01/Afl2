@@ -4,7 +4,6 @@ jobs:
   include:
     - if: 'branch = features'
       os: linux
-      dist: bionic
       jdk: openjdk8
       addons:
         apt:
