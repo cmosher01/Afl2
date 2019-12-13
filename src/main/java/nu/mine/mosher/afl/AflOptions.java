@@ -1,49 +1,38 @@
 package nu.mine.mosher.afl;
 
 
-import java.io.IOException;
-import java.net.*;
-import java.nio.file.Paths;
+import java.io.*;
+import java.nio.file.*;
 import java.util.*;
 
 
 
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class AflOptions {
-    public List<URL> input = new ArrayList<>();
-    public boolean intermediate;
-    public boolean force;
+    public boolean help;
+    public Path input;
+    public PrintStream output = System.out;
 
-    public void __(Optional<String> s) throws IOException {
-        this.input.add(asUrl(s.get()));
-    }
-
-    public void x(Optional<String> s) {
-        intermediate = true;
-    }
-
-    public void force(Optional<String> s) {
-        force = true;
-    }
-
-    private static URL asUrl(final String pathOrUrl) throws IOException {
-        Throwable urlExcept ;
-        try {
-            return new URI(pathOrUrl).toURL();
-        } catch (final Throwable e) {
-            urlExcept = e;
+    public void __(Optional<String> s) {
+        if (Objects.nonNull(this.input)) {
+            throw new IllegalArgumentException("cannot specify more than one input file");
         }
+        this.input = Paths.get(s.get());
+    }
 
-        Throwable pathExcept ;
-        try {
-            return Paths.get(pathOrUrl).toUri().toURL();
-        } catch (final Throwable e) {
-            pathExcept = e;
+    public void output(Optional<String> s) throws FileNotFoundException {
+        if (!s.isPresent()) {
+            throw new IllegalArgumentException("missing output file");
         }
+        this.output = new PrintStream(Paths.get(s.get()).toFile());
+    }
 
-        final IOException except = new IOException("Invalid path or URL: "+pathOrUrl);
-        except.addSuppressed(pathExcept);
-        except.addSuppressed(urlExcept);
-        throw except;
+    public void help(Optional<String> s) {
+        this.help = true;
+        System.out.println("Usage: afl2 [OPTION]... AFL-FILE");
+        System.out.println("Converts an AFL file to a Graphviz dot digraph.");
+        System.out.println("Options:");
+        System.out.println("  --output=FILE  dot file (default is standard output)");
+        System.out.println("  --help  prints this help message");
     }
 }
