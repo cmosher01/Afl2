@@ -90,6 +90,6 @@ public class Afl {
 
 
     private static String quoted(final String s) {
-        return "\""+s.replace("\"", "\\\"")+"\"";
+        return "\""+s.replace("\\","\\\\").replace("\"", "\\\"")+"\"";
     }
 }
