@@ -1,19 +1,19 @@
 digraph {
-"bfb1be14-3854-497e-93a3-1dd40725f52e" [label="edit", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"bfb1be14-3854-497e-93a3-1dd40725f52e" -> "1cb9cbe9-9387-4d10-8d84-a581eba38fbb" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"96f4c988-b406-4441-8501-53bcfd59c185" [label="sources", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"96f4c988-b406-4441-8501-53bcfd59c185" -> "35b4cd01-7516-498f-92ac-634938eee388" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"d3a775f1-8d11-450f-8801-7eb02778f184" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"1a71a288-8d06-4a1b-9e99-928d5de07848" [label="start build", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"1a71a288-8d06-4a1b-9e99-928d5de07848" -> "35b4cd01-7516-498f-92ac-634938eee388" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"1cb9cbe9-9387-4d10-8d84-a581eba38fbb" [label="github jboss", shape=cylinder, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"1cb9cbe9-9387-4d10-8d84-a581eba38fbb" -> "96f4c988-b406-4441-8501-53bcfd59c185" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"35b4cd01-7516-498f-92ac-634938eee388" [label="jenkins job", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"35b4cd01-7516-498f-92ac-634938eee388" -> "8ec8f364-c75d-488d-8795-6e941400f3c2" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"ce7b7c75-c5bd-4281-9475-3c6fd97e4ec1" [label="servers, restart?", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"ce7b7c75-c5bd-4281-9475-3c6fd97e4ec1" -> "1a71a288-8d06-4a1b-9e99-928d5de07848" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"8ec8f364-c75d-488d-8795-6e941400f3c2" [label="config files", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"8ec8f364-c75d-488d-8795-6e941400f3c2" -> "1326c22a-218a-49cc-bb89-2fb726f4a7d8" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"1326c22a-218a-49cc-bb89-2fb726f4a7d8" [label="target jboss host", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"1326c22a-218a-49cc-bb89-2fb726f4a7d8" -> "d3a775f1-8d11-450f-8801-7eb02778f184" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"03e81337-0322-4572-b1fa-9f36b883dce1" [label="edit", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"03e81337-0322-4572-b1fa-9f36b883dce1" -> "fbb956b6-2935-47fc-9182-1b9063a1da4f" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"1b73eab0-ba0c-42db-8fa4-560f9a306fee" [label="sources", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1b73eab0-ba0c-42db-8fa4-560f9a306fee" -> "69b8f2a0-0c33-40c6-a315-ef250998c3ba" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"28bc43fb-53c4-48c8-8ef8-c2340bd5370e" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"8b5490dc-7355-4214-8653-1674f2fde8c2" [label="start build", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"8b5490dc-7355-4214-8653-1674f2fde8c2" -> "69b8f2a0-0c33-40c6-a315-ef250998c3ba" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"fbb956b6-2935-47fc-9182-1b9063a1da4f" [label="github jboss", shape=cylinder, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"fbb956b6-2935-47fc-9182-1b9063a1da4f" -> "1b73eab0-ba0c-42db-8fa4-560f9a306fee" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"69b8f2a0-0c33-40c6-a315-ef250998c3ba" [label="jenkins job", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"69b8f2a0-0c33-40c6-a315-ef250998c3ba" -> "db1d4b40-c734-46cb-ad63-ec24d8d8a668" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"ae25943d-442d-4b91-97ea-6cc8fbd3211b" [label="servers, restart?", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"ae25943d-442d-4b91-97ea-6cc8fbd3211b" -> "8b5490dc-7355-4214-8653-1674f2fde8c2" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"db1d4b40-c734-46cb-ad63-ec24d8d8a668" [label="config files", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"db1d4b40-c734-46cb-ad63-ec24d8d8a668" -> "f0fcc765-b5cb-4b42-81de-ccd4e2daf387" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"f0fcc765-b5cb-4b42-81de-ccd4e2daf387" [label="target jboss host", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"f0fcc765-b5cb-4b42-81de-ccd4e2daf387" -> "28bc43fb-53c4-48c8-8ef8-c2340bd5370e" [taillabel="", arrowhead=onormal, fontname=Helvetica];
 }

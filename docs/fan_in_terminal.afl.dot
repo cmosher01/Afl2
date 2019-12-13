@@ -1,13 +1,13 @@
 digraph {
-"9a9c0494-aa84-40b5-98c2-88ad09a5a398" [label="D", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"9a9c0494-aa84-40b5-98c2-88ad09a5a398" -> "786015ab-1aaf-4149-8ce9-7f23a7abb214" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"786015ab-1aaf-4149-8ce9-7f23a7abb214" [label="U", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"12f60607-05dc-4395-a25d-608b16f6c459" [label="A", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"12f60607-05dc-4395-a25d-608b16f6c459" -> "786015ab-1aaf-4149-8ce9-7f23a7abb214" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"703be6d2-0bb2-40fb-823c-d12d2e94f3ab" [label="E", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"703be6d2-0bb2-40fb-823c-d12d2e94f3ab" -> "786015ab-1aaf-4149-8ce9-7f23a7abb214" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"66a52a1a-fe37-4b49-b4af-318dcc159a12" [label="B", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"66a52a1a-fe37-4b49-b4af-318dcc159a12" -> "786015ab-1aaf-4149-8ce9-7f23a7abb214" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"bad5fcf6-1903-483a-93b0-374895650a07" [label="C", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"bad5fcf6-1903-483a-93b0-374895650a07" -> "786015ab-1aaf-4149-8ce9-7f23a7abb214" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"0dbe7d99-3418-4bb1-b1e3-45b92fd9b5c0" [label="D", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"0dbe7d99-3418-4bb1-b1e3-45b92fd9b5c0" -> "f252e054-9455-4441-9d88-55a31d1e95e0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"f252e054-9455-4441-9d88-55a31d1e95e0" [label="U", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1bc99bef-d160-4447-88d2-79bcb01bf181" [label="A", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1bc99bef-d160-4447-88d2-79bcb01bf181" -> "f252e054-9455-4441-9d88-55a31d1e95e0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"9c3e5287-b7b5-4a4a-9974-56aceab4dafa" [label="E", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"9c3e5287-b7b5-4a4a-9974-56aceab4dafa" -> "f252e054-9455-4441-9d88-55a31d1e95e0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"578cbf9c-722e-41cc-ba0f-7e31125e85af" [label="B", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"578cbf9c-722e-41cc-ba0f-7e31125e85af" -> "f252e054-9455-4441-9d88-55a31d1e95e0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"819b3467-475f-4b6a-b781-efc6d9f23390" [label="C", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"819b3467-475f-4b6a-b781-efc6d9f23390" -> "f252e054-9455-4441-9d88-55a31d1e95e0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
 }
