@@ -1,9 +1,42 @@
-def inc(module) {
-    apply from: "${projectDir}/gradle/${module}.gradle"
+plugins {
+    id 'org.beryx.runtime' version '1.12.7'
+    id 'antlr'
 }
 
-inc('version')
-inc('project')
-inc('antlr')
-inc('dependencies')
-inc('package')
+version = '1.1.0'
+
+group = 'nu.mine.mosher.afl'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri('https://public:\u0067hp_fya6Kseu3XOBMg2icbg7f1LP6ZFYjj35v4Zj@maven.pkg.github.com/cmosher01/*')
+    }
+}
+
+
+
+dependencies {
+    antlr group: 'org.antlr', name: 'antlr4', version: 'latest.release'
+    implementation group: 'nu.mine.mosher.gnopt', name: 'gnopt', version: 'latest.release'
+    runtimeOnly group: 'org.slf4j', name: 'slf4j-simple', version: 'latest.release'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of 17
+    }
+}
+
+application {
+    mainClass = 'nu.mine.mosher.afl.Afl'
+}
+
+generateGrammarSource {
+    arguments += [ '-visitor', '-long-messages', '-package', 'nu.mine.mosher.afl.syntax' ]
+    outputDirectory = new File("${project.buildDir}/generated-src/antlr/main/nu/mine/mosher/afl/syntax")
+}
+
+assemble {
+    dependsOn tasks.jpackage
+}
