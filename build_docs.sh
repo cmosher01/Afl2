@@ -14,7 +14,7 @@ git config --global user.name "build.sh"
 cid=$(git rev-parse HEAD)
 
 git checkout docs --
-git rebase main
+git rebase master
 mkdir -p docs
 
 ./gradlew clean
