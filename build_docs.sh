@@ -1,23 +1,47 @@
-#!/bin/sh
+#!/bin/bash -x
 
-here="$(dirname "$(readlink -f "$0")")"
-cd "$here" || exit 1
+date
+whoami
+pwd
+git --version
+java -version
 
-h=docs/examples.html
-if [ -e $h ] ; then
-    echo "ERROR: file $h exists; will not overwrite."
-    exit 1
-fi
+git config --global user.email "git@github.com"
+git config --global user.name "build.sh"
 
-echo "<!doctype html><html><body>" >$h
-for a in docs/*.afl ; do
-    ./gradlew run --args="--output=$a.dot $a"
-    dot $a.dot -Tsvg -o $a.svg
+cid=$(git rev-parse HEAD)
+
+git checkout docs
+git rebase main
+mkdir -p docs
+
+./gradlew clean
+
+h=./docs/examples.html
+
+ls -l docs
+
+echo "<!doctype html>" >$h
+echo "<html>" >>$h
+echo "<body>" >>$h
+for a in ./examples/*.afl ; do
+    n=$(basename $a)
+    ./gradlew run --args="--output=./docs/$n.dot $a"
+    dot "./docs/$n.dot" -Tsvg -o "./docs/$n.svg"
     {
         echo "<hr><pre><code>"
         cat $a
         echo "</code></pre>"
-        echo "<img src=\"${a#*/}.svg\">"
+        echo "<img src=\"$n.svg\">"
     }>>$h
 done
-echo "</body></html>" >>$h
+echo "</body>" >>$h
+echo "</html>" >>$h
+
+ls -l docs
+
+git add docs
+git status
+git diff --cached
+git commit -m "auto build of $cid"
+git push -f
