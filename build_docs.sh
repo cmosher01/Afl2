@@ -6,6 +6,8 @@ pwd
 git --version
 java -version
 
+sudo apt-get install -y graphviz
+
 git config --global user.email "git@github.com"
 git config --global user.name "build.sh"
 
@@ -18,8 +20,6 @@ mkdir -p docs
 ./gradlew clean
 
 h=./docs/examples.html
-
-ls -l docs
 
 echo "<!doctype html>" >$h
 echo "<html>" >>$h
@@ -42,6 +42,5 @@ ls -l docs
 
 git add docs
 git status
-git diff --cached
 git commit -m "auto build of $cid"
 git push -f
