@@ -1,0 +1,11 @@
+digraph {
+"d3c51d30-cb6e-4d4b-acb4-1d34658f23d9" [label="Prepare Master Cards", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"d3c51d30-cb6e-4d4b-acb4-1d34658f23d9" -> "e2009aec-de61-4b88-896b-f7491c886b2c" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"4cd714f1-af4d-4ce5-b14c-363ce57f9c99" [label="Master Sheets", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"4cd714f1-af4d-4ce5-b14c-363ce57f9c99" -> "d3c51d30-cb6e-4d4b-acb4-1d34658f23d9" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"3c927b8c-d773-4263-bc52-19dec5fc15e5" [label="File", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"331ae3a5-873b-4c96-b584-8f6c1875ace9" [label="Visually Verify", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"331ae3a5-873b-4c96-b584-8f6c1875ace9" -> "3c927b8c-d773-4263-bc52-19dec5fc15e5" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"e2009aec-de61-4b88-896b-f7491c886b2c" [label="Master Cards", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"e2009aec-de61-4b88-896b-f7491c886b2c" -> "331ae3a5-873b-4c96-b584-8f6c1875ace9" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}

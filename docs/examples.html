@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<body>
+<hr><pre><code>
+[ set LC = 0
+[ _read read line
+< _lab is label? - yes
+[ store symbol
+[ _inc set LC++ > _read
+
+< _lab - no
+< _org is ORG? - yes
+[ set LC > _read
+
+< _org - no
+< _end is END? - yes
+| pass 2 >
+
+< _end - no > _inc
+</code></pre>
+<img src="assembler.afl.svg">
+<hr><pre><code>
+/ Master Sheets
+[ Prepare Master Cards
+/ Master Cards
+` Visually Verify
+` File
+</code></pre>
+<img src="c20.8152.fig.03.afl.svg">
+<hr><pre><code>
+( start
+< _b0 B == 0 ? - no
+< _ab A \> B ? - no
+[ A = A \- B > _b0
+
+< _b0 -
+
+( > _ab
+[ backslash \\ here
+< _b0 - \_yes
+@ show A \@ stdout
+( end
+</code></pre>
+<img src="example.afl.svg">
+<hr><pre><code>
+( A > _w
+( B > _w
+( C > _w
+( D > _w
+( E > _w
+
+* _w W
+</code></pre>
+<img src="fan_in_comment.afl.svg">
+<hr><pre><code>
+( A > _r
+( B > _r
+( C > _r
+( D > _r
+( E > _r
+
+< _r R
+</code></pre>
+<img src="fan_in_decision.afl.svg">
+<hr><pre><code>
+( A > _z
+( B > _z
+( C > _z
+( D > _z
+( E > _z
+
+@ _z Z
+</code></pre>
+<img src="fan_in_display.afl.svg">
+<hr><pre><code>
+( A > _t
+( B > _t
+( C > _t
+( D > _t
+( E > _t
+
+~ _t T
+</code></pre>
+<img src="fan_in_document.afl.svg">
+<hr><pre><code>
+( A > _q
+( B > _q
+( C > _q
+( D > _q
+( E > _q
+
+/ _q Q
+</code></pre>
+<img src="fan_in_io.afl.svg">
+<hr><pre><code>
+( A > _x
+( B > _x
+( C > _x
+( D > _x
+( E > _x
+
+$ _x X
+</code></pre>
+<img src="fan_in_manual_input.afl.svg">
+<hr><pre><code>
+( A > _y
+( B > _y
+( C > _y
+( D > _y
+( E > _y
+
+` _y Y
+</code></pre>
+<img src="fan_in_manual_operation.afl.svg">
+<hr><pre><code>
+( A > _s
+( B > _s
+( C > _s
+( D > _s
+( E > _s
+
+| _s S
+</code></pre>
+<img src="fan_in_predefined.afl.svg">
+<hr><pre><code>
+( A > _p
+( B > _p
+( C > _p
+( D > _p
+( E > _p
+
+[ _p P
+</code></pre>
+<img src="fan_in_process.afl.svg">
+<hr><pre><code>
+( A > _v
+( B > _v
+( C > _v
+( D > _v
+( E > _v
+
+{ _v V
+</code></pre>
+<img src="fan_in_storage.afl.svg">
+<hr><pre><code>
+( A > _u
+( B > _u
+( C > _u
+( D > _u
+( E > _u
+
+( _u U
+</code></pre>
+<img src="fan_in_terminal.afl.svg">
+<hr><pre><code>
+` edit
+{ github jboss
+/ sources
+| _j jenkins job
+/ config files
+[ target jboss host
+( end >
+
+` servers, restart?
+` start build > _j
+</code></pre>
+<img src="jboss_config.afl.svg">
+<hr><pre><code>
+( IRQ
+| USER OPTION >
+
+( NMI
+[ SAVE MPU REGISTERS > _start
+
+( RST
+[ INITIALIZE
+< _kb1 KB - KB > _start [ _kb1 - TTY
+[ BIT RATE MEASUREMENT
+
+( _start START
+< _kb2 KB - KB > _cell < _kb2 - TTY
+[ PRINT "KIM"
+[ _char GET CHARACTER
+< _kb3 KB - KB > _cell < _kb3 - TTY
+[ _x1 EXECUTE KEY > _char [ _x1 - G > _run
+
+[ _cell DISPLAY CELL
+< _ak1 AK - NO KEY > _start < _ak1
+[ DISPLAY CELL
+< _ak2 AK - NO KEY > _start < _ak2
+[ GET KEY
+[ _x2 EXECUTE KEY > _cell2 [ _x2 - RUN > _run
+
+[ _cell2 DISPLAY CELL
+< _ak3 AK - NO KEY > _start < _ak3 > _cell2
+
+[ _run PROCESS G/RUN KEYS
+( EXIT
+</code></pre>
+<img src="kim_1_user_man_p_41.afl.svg">
+<hr><pre><code>
+( start A
+( end A
+>
+( otherstart
+( end
+>
+( start B
+/ svg
+( end B
+>
+( start C
+( end C
+>
+( start D
+( end D
+>
+( start E
+( end E
+>
+( start F
+( end F
+>
+( start G
+( end G
+>
+</code></pre>
+<img src="many.afl.svg">
+<hr><pre><code>
+( start
+( end
+</code></pre>
+<img src="minimal.afl.svg">
+<hr><pre><code>
+( start
+[ _op My Operation
+[
+< _ok OK? - yes
+/ _c Catch it
+( end >
+
+( alt start > _c
+
+< _ok - no
+| FOOBAR
+` Fix it > _op
+</code></pre>
+<img src="nominal.afl.svg">
+<hr><pre><code>
+( start
+/ a
+[ cat <a >b
+/ b
+( end
+</code></pre>
+<img src="simple_file_io.afl.svg">
+<hr><pre><code>
+( start
+$ enter data records
+/ data records
+[ sort
+[ print
+~ _report report
+( end >
+
+* confidential > _report
+</code></pre>
+<img src="simple_sort.afl.svg">
+<hr><pre><code>
+( start
+( end >
+( otherstart
+( end
+</code></pre>
+<img src="two.afl.svg">
+<hr><pre><code>
+( _a a - one > _b
+( _a - two > _b
+
+( _b b
+</code></pre>
+<img src="two_edges_between_nodes.afl.svg">
+<hr><pre><code>
+( terminal
+[ process
+/ i/o
+< decision
+| predefined
+~ document
+{ storage
+* comment
+$ manual input
+` manual operation
+@ display
+
+[ _id Vertex Label - Edge Label > _id
+</code></pre>
+<img src="types.afl.svg">
+</body>
+</html>

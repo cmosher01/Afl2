@@ -1,0 +1,20 @@
+digraph {
+"573e02ed-7e7f-472a-b9fc-82122d7bc40f" [label="OK?", shape=diamond, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"573e02ed-7e7f-472a-b9fc-82122d7bc40f" -> "fed0d9c3-3aa9-4252-91aa-d8f2ac048902" [taillabel="no", arrowhead=onormal, fontname=Helvetica];
+"573e02ed-7e7f-472a-b9fc-82122d7bc40f" -> "2ad525b6-8c8d-4d18-a0cc-ad25683a48ca" [taillabel="yes", arrowhead=onormal, fontname=Helvetica];
+"2ad525b6-8c8d-4d18-a0cc-ad25683a48ca" [label="Catch it", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"2ad525b6-8c8d-4d18-a0cc-ad25683a48ca" -> "0334a182-7431-4fed-9b93-0403f6598cd5" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"5cdbe4cc-fd47-4b15-bb66-ab782be1d14e" [label="alt start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"5cdbe4cc-fd47-4b15-bb66-ab782be1d14e" -> "2ad525b6-8c8d-4d18-a0cc-ad25683a48ca" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"694c1e4b-f90c-4b48-b4dc-b38e39c1d110" [label="My Operation", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"694c1e4b-f90c-4b48-b4dc-b38e39c1d110" -> "0503705f-0738-4d2a-9a4b-ebd966ba70fd" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"0334a182-7431-4fed-9b93-0403f6598cd5" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"0503705f-0738-4d2a-9a4b-ebd966ba70fd" [label="", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"0503705f-0738-4d2a-9a4b-ebd966ba70fd" -> "573e02ed-7e7f-472a-b9fc-82122d7bc40f" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"fed0d9c3-3aa9-4252-91aa-d8f2ac048902" [label="FOOBAR", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"fed0d9c3-3aa9-4252-91aa-d8f2ac048902" -> "966e2811-ca26-4f9f-92c1-5a876b1eef7e" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"966e2811-ca26-4f9f-92c1-5a876b1eef7e" [label="Fix it", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"966e2811-ca26-4f9f-92c1-5a876b1eef7e" -> "694c1e4b-f90c-4b48-b4dc-b38e39c1d110" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"7bf4dcd8-5790-4ab8-8d48-20992fbf3173" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"7bf4dcd8-5790-4ab8-8d48-20992fbf3173" -> "694c1e4b-f90c-4b48-b4dc-b38e39c1d110" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}

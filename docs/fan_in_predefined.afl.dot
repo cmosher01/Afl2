@@ -1,0 +1,13 @@
+digraph {
+"45524f17-360d-43ab-aa81-4661b1a7e05f" [label="D", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"45524f17-360d-43ab-aa81-4661b1a7e05f" -> "32783f44-c76a-47e4-93c7-b98ea4749720" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"32783f44-c76a-47e4-93c7-b98ea4749720" [label="S", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"ac0968d0-0a27-42ca-85dc-fc871f428ea5" [label="C", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"ac0968d0-0a27-42ca-85dc-fc871f428ea5" -> "32783f44-c76a-47e4-93c7-b98ea4749720" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"b12cef95-3a29-4434-bd42-ec590d449e92" [label="E", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"b12cef95-3a29-4434-bd42-ec590d449e92" -> "32783f44-c76a-47e4-93c7-b98ea4749720" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"c6061ffe-c493-497d-abca-74b1574ef91a" [label="B", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"c6061ffe-c493-497d-abca-74b1574ef91a" -> "32783f44-c76a-47e4-93c7-b98ea4749720" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"fa84a473-414e-4f7b-9a1d-d7e4bb0db40a" [label="A", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"fa84a473-414e-4f7b-9a1d-d7e4bb0db40a" -> "32783f44-c76a-47e4-93c7-b98ea4749720" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}

@@ -1,0 +1,26 @@
+digraph {
+"e003601a-f164-4132-a450-568ae094fbc2" [label="process", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"e003601a-f164-4132-a450-568ae094fbc2" -> "9e5d1b42-8997-4814-9e51-7daf1d7b367a" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"19b6ebb2-0f55-4493-8cef-f60092b875ef" [label="storage", shape=cylinder, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"19b6ebb2-0f55-4493-8cef-f60092b875ef" -> "063b2e6d-bd14-424d-beb5-f41b920ae3f0" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"9860aa34-3c4c-471c-9673-79422e2f6d9d" [label="predefined", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"9860aa34-3c4c-471c-9673-79422e2f6d9d" -> "54415d14-2b57-4c96-8143-90be6ee1de3d" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"54415d14-2b57-4c96-8143-90be6ee1de3d" [label="document", shape=note, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"54415d14-2b57-4c96-8143-90be6ee1de3d" -> "19b6ebb2-0f55-4493-8cef-f60092b875ef" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"19dca36d-f60b-4b54-8255-972c89baee21" [label="manual operation", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"19dca36d-f60b-4b54-8255-972c89baee21" -> "4239ffdd-c304-44bb-ba3d-19ae1eb9de55" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"063b2e6d-bd14-424d-beb5-f41b920ae3f0" [label="comment", shape=plain, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"063b2e6d-bd14-424d-beb5-f41b920ae3f0" -> "e29468d4-8d20-40ff-bfb1-c3464dc26b01" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"9e5d1b42-8997-4814-9e51-7daf1d7b367a" [label="i/o", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"9e5d1b42-8997-4814-9e51-7daf1d7b367a" -> "e914f9aa-6c3a-4de0-a4e1-2382ebe880de" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"4239ffdd-c304-44bb-ba3d-19ae1eb9de55" [label="display", shape=octagon, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"4239ffdd-c304-44bb-ba3d-19ae1eb9de55" -> "f723a6e0-8b1c-4ec4-8ae3-ff643d52ff4c" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"f723a6e0-8b1c-4ec4-8ae3-ff643d52ff4c" [label="Vertex Label", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"f723a6e0-8b1c-4ec4-8ae3-ff643d52ff4c" -> "f723a6e0-8b1c-4ec4-8ae3-ff643d52ff4c" [taillabel="Edge Label", arrowhead=onormal, fontname=Helvetica];
+"4d29556e-9015-40b3-a800-63a54f4f3b12" [label="terminal", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"4d29556e-9015-40b3-a800-63a54f4f3b12" -> "e003601a-f164-4132-a450-568ae094fbc2" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"e914f9aa-6c3a-4de0-a4e1-2382ebe880de" [label="decision", shape=diamond, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"e914f9aa-6c3a-4de0-a4e1-2382ebe880de" -> "9860aa34-3c4c-471c-9673-79422e2f6d9d" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"e29468d4-8d20-40ff-bfb1-c3464dc26b01" [label="manual input", shape=house, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"e29468d4-8d20-40ff-bfb1-c3464dc26b01" -> "19dca36d-f60b-4b54-8255-972c89baee21" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}

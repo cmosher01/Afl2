@@ -1,0 +1,19 @@
+digraph {
+"b036ccb8-5698-4d30-9ad7-1a09b94eec58" [label="config files", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"b036ccb8-5698-4d30-9ad7-1a09b94eec58" -> "a44caaee-aa63-45a2-8177-c1ce6bcaf98b" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"a36fad98-34ab-47d9-aaac-379bf30d2b15" [label="edit", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"a36fad98-34ab-47d9-aaac-379bf30d2b15" -> "a01e654a-ad88-45a2-a4ab-5185d673a89f" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"a44caaee-aa63-45a2-8177-c1ce6bcaf98b" [label="target jboss host", shape=box, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"a44caaee-aa63-45a2-8177-c1ce6bcaf98b" -> "6702a605-e739-4153-90f0-34d118ef1c07" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"1097c88f-131d-4f15-8c9c-6bd822e2a1be" [label="servers, restart?", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"1097c88f-131d-4f15-8c9c-6bd822e2a1be" -> "c976601b-c2b5-4c51-8481-723c9bcf75c8" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"5b3cb509-5512-40b9-8879-62e691ea3624" [label="sources", shape=parallelogram, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"5b3cb509-5512-40b9-8879-62e691ea3624" -> "dbf4d9ed-2081-40ea-b6fe-e73cebc2fe30" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"6702a605-e739-4153-90f0-34d118ef1c07" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"dbf4d9ed-2081-40ea-b6fe-e73cebc2fe30" [label="jenkins job", shape=box3d, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"dbf4d9ed-2081-40ea-b6fe-e73cebc2fe30" -> "b036ccb8-5698-4d30-9ad7-1a09b94eec58" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"c976601b-c2b5-4c51-8481-723c9bcf75c8" [label="start build", shape=invtrapezium, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"c976601b-c2b5-4c51-8481-723c9bcf75c8" -> "dbf4d9ed-2081-40ea-b6fe-e73cebc2fe30" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+"a01e654a-ad88-45a2-a4ab-5185d673a89f" [label="github jboss", shape=cylinder, style=filled, fillcolor=cornsilk, fontname=Helvetica];
+"a01e654a-ad88-45a2-a4ab-5185d673a89f" -> "5b3cb509-5512-40b9-8879-62e691ea3624" [taillabel="", arrowhead=onormal, fontname=Helvetica];
+}
