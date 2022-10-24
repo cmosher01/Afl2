@@ -1,8 +1,0 @@
-digraph {
-"ed5422db-1c0e-42a4-8403-fc5d6f0b3e96" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"ed5422db-1c0e-42a4-8403-fc5d6f0b3e96" -> "59a6ee96-0f6e-4eec-9ddd-399fca3fb584" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"59a6ee96-0f6e-4eec-9ddd-399fca3fb584" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"b7e9e773-a83a-45a4-98b7-4128a5046c7e" [label="otherstart", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"b7e9e773-a83a-45a4-98b7-4128a5046c7e" -> "e25ba59c-9ad0-4ced-93c4-36c46dc4d1cb" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-"e25ba59c-9ad0-4ced-93c4-36c46dc4d1cb" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-}

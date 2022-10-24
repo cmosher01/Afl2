@@ -1,5 +1,0 @@
-digraph {
-"94e1bed4-f698-4c18-bda1-586e914179bf" [label="end", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"e6f05323-a07b-4810-92fe-db17f4daefa6" [label="start", shape=ellipse, style=filled, fillcolor=cornsilk, fontname=Helvetica];
-"e6f05323-a07b-4810-92fe-db17f4daefa6" -> "94e1bed4-f698-4c18-bda1-586e914179bf" [taillabel="", arrowhead=onormal, fontname=Helvetica];
-}
