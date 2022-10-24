@@ -13,7 +13,7 @@ git config --global user.name "build.sh"
 
 cid=$(git rev-parse HEAD)
 
-git checkout docs
+git checkout docs --
 git rebase main
 mkdir -p docs
 
